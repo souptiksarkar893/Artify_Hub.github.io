@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTIFY HUB</title>
+    <link rel="icon" href="./drawing.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h3 class="heading">ARTIFY HUB</h3>
+    <div id="canvas-container">
+      <canvas id="canvas" width="1300" height="500"></canvas>
+    </div>
+    <div class="toolbar">
+      <label for="brushColor">Brush Color:</label>
+      <input type="color" id="brushColor" value="#ffffff" />
+      <label for="brushSize">Brush Size:</label>
+      <input type="range" id="brushSize" min="1" max="50" value="5" />
+      <button onclick="changeTool('pencil')" id="pencilButton">
+        <i class="fas fa-pencil-alt"></i> Pencil
+      </button>
+      <button onclick="changeTool('brush')" id="brushButton">
+        <i class="fas fa-paint-brush"></i> Brush
+      </button>
+      <button onclick="changeTool('eraser')" id="eraserButton">
+        <i class="fas fa-eraser"></i> Eraser
+      </button>
+      <button onclick="changeTool('line')" id="lineButton">
+        <i class="fas fa-minus"></i> Line
+      </button>
+      <button onclick="changeTool('circle')" id="circleButton">
+        <i class="far fa-circle"></i> Circle
+      </button>
+      <button onclick="changeTool('rectangle')" id="rectangleButton">
+        <i class="far fa-square"></i> Rectangle
+      </button>
+      <button onclick="changeTool('text')" id="textButton">
+        <i class="fas fa-font"></i> Text
+      </button>
+      <button onclick="changeTool('triangle')" id="triangleButton">
+        <i class="fas fa-play"></i> Triangle
+      </button>
+      <button onclick="changeTool('polygon')" id="polygonButton">
+        <i class="fas fa-draw-polygon"></i> Polygon
+      </button>
+      <button onclick="changeTool('select')" id="selectButton">
+        <i class="fas fa-mouse-pointer"></i> Select
+      </button>
+      <button onclick="changeTool('fill')" id="fillButton">
+        <i class="fas fa-fill"></i> Fill
+      </button>
+      <button onclick="deleteObject()" id="deleteButton">
+        <i class="fas fa-trash-alt"></i> Delete
+      </button>
+      <button onclick="undo()" id="undoButton">
+        <i class="fas fa-undo"></i> Undo
+      </button>
+      <button onclick="redo()" id="redoButton">
+        <i class="fas fa-redo"></i> Redo
+      </button>
+      <button onclick="clearCanvas()" id="clearButton">
+        <i class="fas fa-trash"></i> Clear
+      </button>
+      <button onclick="downloadCanvas()" id="downloadButton">
+        <i class="fas fa-download"></i> Download
+      </button>
+      <input
+        type="file"
+        id="imageLoader"
+        accept="image/*"
+        style="display: none"
+      />
+      <button
+        onclick="document.getElementById('imageLoader').click()"
+        id="insertImageButton"
+      >
+        <i class="fas fa-image"></i> Insert Image
+      </button>
+      <input
+        type="color"
+        id="fillColor"
+        value="#ffffff"
+        style="display: none"
+      />
+      <button onclick="fillCanvasColor()" id="fillCanvasButton">
+        <i class="fas fa-fill"></i> Fill Canvas
+      </button>
+    </div>
+    <br />
+    <br />
+    <footer>
+      <div class="footer-container">
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <ul style="list-style: none; padding: 0">
+            <li style="display: inline-block; margin-right: 10px">
+              <a href="https://twitter.com/souptiksarkar60"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li style="display: inline-block; margin-right: 10px">
+              <a href="https://instagram.com/souptiksarkar147"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li style="display: inline-block">
+              <a href="https://www.linkedin.com/in/souptik-sarkar-738502225"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>&copy; 2024 ARTIFY HUB. All rights reserved.</p>
+        <p>Designed by Souptik Sarkar</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

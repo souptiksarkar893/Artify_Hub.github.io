@@ -1,0 +1,74 @@
+body {
+  font-family: "Indie Flower", cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ff9900;
+  text-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 90%;
+}
+canvas {
+  border: none;
+  cursor: crosshair;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+.toolbar {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+.toolbar button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9900;
+  color: #000000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(219, 133, 4, 0.1);
+}
+.toolbar button.selected {
+  background-color: #fff;
+  box-shadow: 0 0 20px #ff9900;
+}
+.toolbar button:hover {
+  transform: scale(1.05);
+}
+.toolbar input[type="color"],
+.toolbar input[type="range"] {
+  vertical-align: middle;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 97%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ff9900;
+}
